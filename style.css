@@ -1,0 +1,224 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f9f4;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+/* ===== CABEÇALHO ===== */
+.header {
+  background-color: #2e7d32; /* verde escuro - tema agro */
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Seção informativa */
+.info {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.info h2 {
+  color: #2e7d32;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.info h2:first-child {
+  margin-top: 0;
+}
+
+.info p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* ===== SEÇÃO DO QUIZ ===== */
+.quiz-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-section h2 {
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.quiz-intro {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Caixa da pergunta */
+.quiz-box {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.question {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Opções de resposta */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.option-btn {
+  text-align: left;
+  padding: 12px 15px;
+  border: 2px solid #c8e6c9;
+  background-color: #f1f8f1;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+  background-color: #e0f2e1;
+  border-color: #81c784;
+}
+
+/* Estilos de feedback nas opções */
+.option-btn.correct {
+  background-color: #c8e6c9;
+  border-color: #2e7d32;
+  font-weight: bold;
+}
+
+.option-btn.incorrect {
+  background-color: #ffcdd2;
+  border-color: #c62828;
+  font-weight: bold;
+}
+
+.option-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+/* Texto de feedback (certo/errado) */
+.feedback {
+  font-weight: bold;
+  min-height: 24px;
+  margin-bottom: 10px;
+}
+
+.feedback.correct-text {
+  color: #2e7d32;
+}
+
+.feedback.incorrect-text {
+  color: #c62828;
+}
+
+/* Botões gerais */
+.btn {
+  background-color: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Resultado final */
+.result-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.result-box h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.result-box p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== RODAPÉ ===== */
+.footer {
+  background-color: #1b5e20;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.footer p {
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 20px 15px;
+  }
+
+  .info, .quiz-section {
+    padding: 18px;
+  }
+
+  .question {
+    font-size: 1.05rem;
+  }
+
+  .option-btn {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+}
